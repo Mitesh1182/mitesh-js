@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var intro =  {
+            titrle : "my menu",
+            height : 200,
+            width : 300,
+            hastitle : true 
+        };
+
+        function numericValue(intro){
+            for (key in intro){
+                if (typeof intro[key] === "number"){
+                    intro[key] = intro[key] * 2;
+                }
+                else if(typeof intro[key] === "string") {
+                    intro[key] = "This is, "  + intro[key] ;
+                }
+                else {
+                    intro[key] = !(intro[key]);
+                }
+            }
+        }
+        numericValue(intro);
+    </script>
+</body>
+</html>
