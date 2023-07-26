@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: solid 2px black;
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .grid-box {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+        }
+
+        .green-box {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-box">
+        <div class="box " id="1" onclick="divclick (1)"></div>
+        <div class="box" id="2" onclick="divclick(2)"></div>
+        <div class="box" id="3" onclick="divclick (3)"></div>
+        <div class="box" id="4" onclick="divclick (4)"></div>
+        <div class="box" id="5" onclick="divclick (5)"></div>
+        <div class="box" id="6" onclick="divclick (6)"></div>
+        <div class="box" id="7" onclick="divclick (7)"></div>
+        <div class="box" id="8" onclick="divclick (8)"></div>
+        <div class="box" id="9" onclick="divclick (9)"></div>
+        <div class="box" id="10" onclick="divclick (10)"></div>
+    </div>
+    <script>
+        function divclick(id) {
+            var clickbox = document.getElementById(id);
+            if (clickbox.classList.contains("green-box")) {
+                clickbox.classList.remove("green-box");
+            }
+            else {
+                clickbox.classList.add("green-box");
+            }
+        }
+    </script>
+</body>
+
+</html>
